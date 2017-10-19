@@ -129,7 +129,7 @@ export const config: IDashboardConfig = /*return*/ {
               var feedbackResults = []
               console.log(results)
               results.forEach(row => {
-                if (row.customDimensions_userLikedService.toLowerCase() == "yes") {
+                if (row.customDimensions_userLikedService == "yes") {
                   feedbackResults.push({ name: "Positive", value: row.value })
                 }
                 else {
