@@ -124,7 +124,7 @@ export const config: IDashboardConfig = /*return*/ {
 					feedback: {
 						query: ({ granularity }) => `
                 where name == 'SNSEvent.Feedback' 
-                | summarize value = count() by tostring(customDimensions.userLikedService)   `,
+                | summarize value = count() by tolower(customDimensions.userLikedService)   `,
 						calculated: (results) => {
               var feedbackResults = []
               console.log(results)
